@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+html,
+body {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	background-image: url('bg.jpg');
+}
+
+
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 135px;
+  background-color: black;
+}
+
+.banner-line-top{
+  position: relative;
+  top: 0;
+  background-color: white;
+  width: 100%;
+  height: 1px;
+}
+
+.banner-line-bottom{
+  position: relative;
+  top: 135px;
+  background-color: white;
+  width: 100%;
+  height: 1px;
+}
+
+.retina{
+  color: darkviolet;
+  font-size: 300%;
+  font-family: 'Lato', sans-serif;
+  text-shadow: 0 0 10px purple;
+  margin: 0;
+  position: relative;
+  top: 5px;
+  left: 125px;
+}
+
+.tg{
+  position: relative;
+  top: 11px;
+  left: 1140px;
+  padding: 0;
+  border: 0;
+  width: 100px;
+  height: 100px;
+  background-color: black;
+}
+
+.tg-pic{
+  position: relative;
+  left: 300px;
+  padding: 0;
+  border: 0;
+  width: 100px;
+  height: 100px;
+}
+
+svg {
+	width: calc(40px * 3);
+	height: calc(40px * 3);
+  position: relative;
+  right: 445px;
+  border: none;
+  border-radius: 20px;
+}
+
+#building_bottom,
+#window_01,
+#window_02,
+#door {
+	transform: translateY(20px);
+	z-index: 1;
+}
+
+#building_top,
+#balcony_01,
+#balcony_02,
+#balcony_03,
+#balcony_04,
+#balcony_05,
+#balcony_06 {
+	transform: translateY(56px);
+	z-index: -1;
+}
+
+#small_tree,
+#big_tree {
+	transform: translateY(28px);
+}
+
+#building_bottom {
+	animation: buildingBottom 1s ease-out forwards;
+}
+
+#window_01,
+#window_02,
+#door {
+	animation: buildingBottom 1s 0.1s ease-in forwards;
+}
+
+#building_top {
+	animation: buildingTop 1s 1.2s ease-out forwards;
+}
+
+#balcony_01,
+#balcony_02,
+#balcony_03 {
+	animation: buildingTop 1s 1.4s ease-out forwards;
+}
+
+#balcony_04,
+#balcony_05,
+#balcony_06 {
+	animation: buildingTop 1s 1.6s ease-out forwards;
+}
+
+#small_tree,
+#big_tree {
+	animation: trees 1s 2s ease-out forwards;
+}
+
+#cloud_left {
+	transform: translateX(-11px);
+	animation: cloudLeft 20s 2s linear infinite;
+}
+
+#cloud_right {
+	transform: translateX(72px);
+	animation: cloudRight 15s 2s linear infinite;
+}
+
+@keyframes buildingBottom {
+	0% 		{ transform: translateY(20px) }
+	100% 	{ transform: translateY(0) }
+}
+
+@keyframes buildingTop {
+	0% 		{ transform: translateY(56px); }
+	100% 	{ transform: translateY(0); }
+}
+
+@keyframes trees {
+	0% 		{ transform: translateY(28px); }
+	100% 	{ transform: translateY(0); }
+}
+
+@keyframes cloudLeft {
+		0% 		{ transform: translateX(-11px); }
+	100% 		{ transform: translateX(100px); }
+}
+
+@keyframes cloudRight {
+		0% 		{ transform: translateX(72px); }
+	100% 		{ transform: translateX(-100px); }
+}
